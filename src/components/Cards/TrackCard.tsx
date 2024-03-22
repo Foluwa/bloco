@@ -18,7 +18,7 @@ const TrackCard: React.FC<Card> = ({ image }) => {
             >
                 <div className="mb-8">
                     <div className="flex justify-between items-center text-sm text-gray-600">
-                        <span className="text-white">DJ DAY DAY</span>
+                        <span className="bg-gray-100 text-gray-800  px-2.5 py-1 rounded-full text-gray-300 dj-badge">DJ DAY DAY</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlSpace="preserve"
@@ -37,7 +37,7 @@ const TrackCard: React.FC<Card> = ({ image }) => {
                 </div>
                 <div className="flex items-center">
                     <div className="text-sm">
-                        <p className="text-white leading-none">19 hours ago</p>
+                        <p className="timeago leading-none">19 hours ago</p>
                     </div>
                 </div>
             </div>

@@ -39,12 +39,13 @@ const Home: React.FC = () => {
   return (
     <div>
       <main className="flex min-h-screen flex-col items-center justify-between p-4 tracking-widest">
-        <div className="mx-auto px-2 py-8">
+        <div className="mx-auto py-8">
           <div className="grid grid-cols-1 gap-4">
             <Image src={logo} alt="DJ DAYDAY logo" className="w-40 h-20 mx-auto" />
           </div>
           <div className="grid grid-cols-1 gap-4 mt-8">
             <Image src={profile} alt="DJ DAYDAY" className="mx-auto" />
+            {/* <Image src={profile} alt="DJ DAYDAY" className="mx-auto h-auto max-w-lg rounded-lg" /> */}
           </div>
           <div className="mt-8 justify-items-center text-center">
             {socials.map((social) => (

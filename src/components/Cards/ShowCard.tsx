@@ -15,7 +15,7 @@ const ShowCard: React.FC<CardProps> = ({ title, image }) => {
                 height={20}
                 alt={title}
             />
-            <h5 className="text-2xl text-black text-center flex-grow p-6">
+            <h5 className="text-xl text-black text-center flex-grow p-6">
                 {title}
             </h5>
         </div>

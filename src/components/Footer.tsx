@@ -15,6 +15,13 @@ const Footer: React.FC = () => {
           </span>
         </div>
 
+        {/* <span className="flex items-center justify-center bg-gray rounded-full bg-gray-100 text-gray-800 text-xsme-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+          <Image src={blocoshape.src} width={20} height={20} className="mr-2" alt="" />
+          <span className="block text-gray-500 text-white dark:text-gray-400">
+            CREATE A BLOCO.ME
+          </span>
+        </span> */}
+
         <div className="flex items-center justify-center">
           <span className="block text-white text-center dark:text-gray-400">
             POWERED BY
