@@ -12,8 +12,7 @@ import yt_short_1 from '../../public/images/yt_short_1.png';
 import yt_short_2 from '../../public/images/yt_short_2.png';
 
 
-
-const YoutubeSlider = () => {
+const YoutubeSlider: React.FC = () => {
   const slides = [yt_short_1, yt_short_2]
   return (
     <Carousel className="w-full max-w-xs">

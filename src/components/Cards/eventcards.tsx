@@ -2,11 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import event from '../../../public/images/event.png';
 
-interface Event {
-  name: string;
-}
-
-const EventCard: React.FC<Event> = ({ }) => {
+const EventCard: React.FC = () => {
   return (
     <div
       className="flex flex-col gap-1 rounded-lg p-5 text-gray h-auto overflow-hidden transition duration-300 ease-in-out group-hover:scale-110 group-hover:opacity-100"
@@ -30,11 +26,6 @@ const EventCard: React.FC<Event> = ({ }) => {
             <span className="text-black">FROM £25.00</span>
           </div>
         </div>
-      </div>
-      <div
-        className="invisible h-auto max-h-0 p-5 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000"
-      >
-        <p style={{ fontSize: '.9em' }} dangerouslySetInnerHTML={{ __html: 'This is all about John' }} /> {/* Consider using a safer alternative to dangerouslySetInnerHTML */}
       </div>
     </div>
   );

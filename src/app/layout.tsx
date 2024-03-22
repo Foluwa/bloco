@@ -29,7 +29,7 @@ const apercu = local({
       weight: '700',
     },
   ],
-  // variable: '--font-apercu',
+  variable: '--font-apercu',
 });
 
 

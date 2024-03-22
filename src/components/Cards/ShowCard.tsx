@@ -5,7 +5,6 @@ interface CardProps {
     image: string;
 }
 
-
 const ShowCard: React.FC<CardProps> = ({ title, image }) => {
     return (
         <div className="flex rounded-full shadow-md overflow-hidden bg-white w-full p-2 border border-1 border-gray-300">
