@@ -3,14 +3,14 @@ import logo from '../../public/images/logo.png';
 import card1 from '../../public/images/card_1.png';
 import card2 from '../../public/images/card_2.png';
 import card3 from '../../public/images/card_3.png';
-import InfoCard from '../components/Cards/InfoCard';
-import ShowCard from '../components/Cards/ShowCard';
+import InfoCard from '../components/cards/infocard';
+import ShowCard from '../components/cards/showcard';
 import profile from '../../public/images/profile.png';
 import mixtape from '../../public/images/mixtape.png';
-import EventCard from '../components/Cards/EventCard';
-import TrackCard from '../components/Cards/TrackCard';
+import EventCard from '../components/cards/eventcards';
+import TrackCard from '../components/cards/trackcard';
 // import Footer from '../components/Footer';
-// import YoutubeSlider from '../components/YoutubeSlider';
+import YoutubeSlider from '../components/youtubeslider';
 
 import { SocialIcon } from 'react-social-icons'
 
@@ -35,7 +35,7 @@ const Home = () => {
 
   ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 tracking-widest">
       <div className="mx-auto px-4 py-8">
         <div className="grid grid-cols-1 gap-4 mt-8">
           <Image src={logo} alt="DJ DAYDAY logo" className="w-40 h-20 mx-auto" />
@@ -43,7 +43,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-4 mt-8">
           <Image src={profile} alt="DJ DAYDAY" className="mx-auto" />
         </div>
-        <div className="mt-8 justify-items-center">
+        <div className="mt-8 justify-items-center text-center">
           {socials.map((social) => (
               <SocialIcon bgColor="#3E3E3E" target="_blank" url={social} className="social-icon-p" />
             ))}
@@ -69,7 +69,7 @@ const Home = () => {
 
         {/* Slider */}
         {/* yt_short_1 */}
-        {/* <YoutubeSlider /> */}
+        <YoutubeSlider />
 
         <InfoCard title="LATEST EVENT" color="#FFFFFF" />
 
@@ -83,36 +83,3 @@ const Home = () => {
 }
 
 export default Home;
-
-// import * as React from "react"
-
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-export function CarouselDemo() {
-  return (
-    <Carousel className="w-full max-w-xs">
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  )
-}

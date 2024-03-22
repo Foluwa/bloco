@@ -11,7 +11,7 @@ const EventCard: React.FC<Event> = ({ }) => {
     <div
       className="flex flex-col gap-1 rounded-lg p-5 text-gray h-auto overflow-hidden transition duration-300 ease-in-out group-hover:scale-110 group-hover:opacity-100"
     >
-      <div className="group relative m-0 flex h-96 w-96 rounded-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
+      <div className="group relative m-0 flex h-96 w-full rounded-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
         <div className="z-10 h-full w-full overflow-hidden rounded-xl opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 ">
           <Image
             src={event.src}
