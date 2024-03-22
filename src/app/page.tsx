@@ -1,16 +1,22 @@
 import Image from "next/image";
 import logo from '../../public/images/logo.png';
-import profile from '../../public/images/profile.png';
 import card1 from '../../public/images/card_1.png';
 import card2 from '../../public/images/card_2.png';
 import card3 from '../../public/images/card_3.png';
 import InfoCard from '../components/Cards/InfoCard';
 import ShowCard from '../components/Cards/ShowCard';
+import profile from '../../public/images/profile.png';
+import mixtape from '../../public/images/mixtape.png';
 import EventCard from '../components/Cards/EventCard';
 import TrackCard from '../components/Cards/TrackCard';
-import { Facebook, XTwitter } from '../../src/components/SocialMedia/index';
+// import Footer from '../components/Footer';
+// import YoutubeSlider from '../components/YoutubeSlider';
+// import { Facebook, XTwitter } from '../../src/components/SocialMedia/index';
 
-export default function Home() {
+import { SocialIcon } from 'react-social-icons'
+
+const Home = () => {
+  const socials = ["https://www.facebook.com", "https://www.x.com", "https://www.instagram.com", "https://www.youtube.com", "https://www.tiktok.com", "https://www.whatsapp.com", "https://www.snapchat.com"]
   const cards = [
     {
       id: '1',
@@ -31,16 +37,17 @@ export default function Home() {
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4">
-      <div className="container mx-auto px-4 py-8">
+      <div className="mx-auto px-4 py-8">
         <div className="grid grid-cols-1 gap-4 mt-8">
           <Image src={logo} alt="DJ DAYDAY logo" className="w-40 h-20 mx-auto" />
         </div>
         <div className="grid grid-cols-1 gap-4 mt-8">
-          <Image src={profile} alt="DJ DAYDAY"  className="mx-auto" />
+          <Image src={profile} alt="DJ DAYDAY" className="mx-auto" />
         </div>
-        <div className="grid grid-cols-1 gap-4 mt-8">
-          <Facebook url="https://www.facebook.com/" />
-          <XTwitter url="https://www.x.com/" />
+        <div className="mt-8 justify-items-center">
+          {socials.map((social) => (
+              <SocialIcon bgColor="#3E3E3E" target="_blank" url={social} className="social-icon-p" />
+            ))}
         </div>
 
         <div className="grid grid-cols-1 gap-4 mt-8">
@@ -53,22 +60,27 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 gap-4 mt-8">
-          <InfoCard title="NEW MIX LIVE - TAKE A LISTEN" color="#FF8600" />
-        </div>
+        <InfoCard title="NEW MIX LIVE - TAKE A LISTEN" color="#FF8600" />
 
 
-        <TrackCard image={card1.src} />
+        <TrackCard image={mixtape.src} />
 
-        <div className="grid grid-cols-1 gap-4 mt-8">
-          <InfoCard title="LATEST EVENT" color="#FFFFFF" />
-        </div>
 
-        <div className="grid grid-cols-1 gap-4 mt-8">
-          <EventCard name='d' />
+        <InfoCard title="YOUTUBE SHORTS" color="#FF0000" />
 
-        </div>
+        {/* Slider */}
+        {/* yt_short_1 */}
+        {/* <YoutubeSlider /> */}
+
+        <InfoCard title="LATEST EVENT" color="#FFFFFF" />
+
+        <EventCard name='d' />
+
+        {/* <Footer /> */}
+
       </div>
     </main>
   );
 }
+
+export default Home;
