@@ -7,7 +7,7 @@ interface CardProps {
 
 const ShowCard: React.FC<CardProps> = ({ title, image }) => {
     return (
-        <div className="flex rounded-full shadow-md overflow-hidden bg-white w-full p-2 mt-2 border border-1 border-gray-300">
+        <div className="flex rounded-full shadow-md overflow-hidden bg-white w-full p-2 mt-4 border border-1 border-gray-300">
             <Image
                 className="w-20 rounded-l-lg"
                 src={image}

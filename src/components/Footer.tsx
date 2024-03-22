@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-">
 
         <div
-          className={`flex items-center rounded-full px-4 py-3 hover:bg-gray-100 bg-[#565657] min-content`}
+          className={`flex items-center rounded-full px-4 py-3 bg-[#565657] min-content`}
         >
           <div className="relative rounded-full bg-black w-8 h-8 flex items-center justify-center">
             <Image src={blocoshape.src} width={13} height={15} alt="" />
