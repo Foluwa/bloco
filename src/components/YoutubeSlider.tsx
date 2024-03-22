@@ -7,7 +7,6 @@ import yt_short_2 from '../../public/images/yt_short_2.png';
 const YoutubeSlider: React.FC = () => {
   const images = [yt_short_1, yt_short_2]
   return (
-
     <div className="flex flex-row">
       {images.map((image) => (
         <Image

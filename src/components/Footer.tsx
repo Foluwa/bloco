@@ -6,7 +6,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black shadow dark:bg-gray-900">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-">
-
         <div
           className={`flex items-center rounded-full px-4 py-3 bg-[#565657] min-content`}
         >
