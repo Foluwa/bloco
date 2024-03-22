@@ -9,7 +9,7 @@ const TrackCard: React.FC<Card> = ({ image }) => {
             style={{ backgroundColor: '#FF4000' }}
         >
             <div
-                className="h-48 w-48 flex-none bg-cover rounded-2xl overflow-hidden"
+                className="h-48 w-48 mx-auto lg:mx-0 flex-none bg-cover rounded-2xl overflow-hidden"
                 style={{ backgroundImage: `url(${image})` }}
                 title=""
             ></div>

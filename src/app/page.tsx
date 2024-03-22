@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { SocialIcon } from 'react-social-icons'
 
+import logo from '../../public/images/logo.png';
+import card1 from '../../public/images/card_1.png';
+import card2 from '../../public/images/card_2.png';
+import card3 from '../../public/images/card_3.png';
+
 import Footer from '../components/footer';
 import InfoCard from '../components/cards/infocard';
 import ShowCard from '../components/cards/showcard';
@@ -10,10 +15,6 @@ import EventCard from '../components/cards/eventcards';
 import TrackCard from '../components/cards/trackcard';
 import YoutubeSlider from '../components/youtubeslider';
 
-import logo from '../../public/images/logo.png';
-import card1 from '../../public/images/card_1.png';
-import card2 from '../../public/images/card_2.png';
-import card3 from '../../public/images/card_3.png';
 
 const Home: React.FC = () => {
   const socials = ["https://www.facebook.com", "https://www.x.com", "https://www.instagram.com",
@@ -44,8 +45,7 @@ const Home: React.FC = () => {
             <Image src={logo} alt="DJ DAYDAY logo" className="w-40 h-20 mx-auto" />
           </div>
           <div className="grid grid-cols-1 gap-4 mt-8">
-            <Image src={profile} alt="DJ DAYDAY" className="mx-auto" />
-            {/* <Image src={profile} alt="DJ DAYDAY" className="mx-auto h-auto max-w-lg rounded-lg" /> */}
+            <Image src={profile} alt="DJ DAYDAY" className="mx-auto rounded-2xl" />
           </div>
           <div className="mt-8 justify-items-center text-center">
             {socials.map((social) => (
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
 
           <InfoCard title="Award winning DJ & Radio Presenter" color="#FF4000" />
 
-          <div className="grid grid-cols-1 gap-4 mt-8">
+          <div className="container mx-auto px-4">
             {cards.map((card) => (
               <ShowCard key={card.id} title={card.title} image={card.image.src} />
             ))}

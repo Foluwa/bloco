@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
  
+/* Import the slick.css file*/
+/* @import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';  */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -88,4 +92,20 @@ background-color: #FF6531;
 }
 .timeago{
   color: #FFC6B2;
+}
+
+.youtube-widget{
+  margin: 0.5em;
+  border-radius: 4em !important;
+  border: 4em;
+}
+
+.youtube-widget iframe {
+  border-radius: 1em;
+}
+
+.min-content{
+  width: -moz-min-content; /* Firefox */
+  width: max-content;
+  margin: 0 auto
 }
