@@ -20,7 +20,7 @@ const EventCard: React.FC = () => {
           className="p-3 rounded-xl opacity-90 absolute bottom-0 z-20 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110 group-hover:opacity-100"
           style={{ backgroundColor: '#EDEBEA', width: '100%' }}
         >
-          <h2 className="text-lg font-bold">30 Years Of Day Day + Donae'O Live! Friday 29th March…</h2>
+          <h2 className="text-lg font-bold">30 Years Of Day Day + Donae&apos;O Live! Friday 29th March…</h2>
           <div className="flex justify-between items-center text-sm text-gray-600">
             <span className="text-black font-bold">XOYO Birmingham</span>
             <span className="text-black">FROM £25.00</span>

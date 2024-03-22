@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           </div>
           <div className="mt-8 justify-items-center text-center">
             {socials.map((social) => (
-              <SocialIcon bgColor="#3E3E3E" target="_blank" url={social} className="social-icon-p" />
+              <SocialIcon key={social} bgColor="#3E3E3E" target="_blank" url={social} className="social-icon-p" />
             ))}
           </div>
 
