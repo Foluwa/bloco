@@ -1,7 +1,31 @@
 'use client';
-import YouTube from 'react-youtube';
-import React, { useState } from 'react';
 
+import Image from "next/image";
+import yt_short_1 from '../../public/images/yt_short_1.png';
+import yt_short_2 from '../../public/images/yt_short_2.png';
+
+const YoutubeSlider: React.FC = () => {
+  const images = [yt_short_1, yt_short_2]
+  return (
+
+    <div className="flex flex-row">
+      {images.map((image) => (
+        <Image
+          src={image.src}
+          alt="Image"
+          width={500}
+          height={300}
+          className="p-2 w-1/2 rounded-3xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+        />
+      ))}
+    </div>
+  );
+};
+
+
+export default YoutubeSlider;
+
+/*
 const YoutubeSlider: React.FC = () => {
   const slides = ["OM6dzXJZysg", "lkYFu8UMk-o", "A8vzUH6-irA", "H3bXEKwhSVI", "LamMpnFEUrc", "lsJvSJpjaNE"];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,34 +57,4 @@ const YoutubeSlider: React.FC = () => {
       </button>
     </div>
   );
-};
-
-export default YoutubeSlider;
-
-
-
-interface YouTubeShortProps {
-  videoId: string;
-}
-
-const YouTubeShort: React.FC<YouTubeShortProps> = ({ videoId }) => {
-  const opts = {
-    playerVars: {
-      autoplay: 0,
-      modestbranding: 1,
-      rel: 0,
-      showinfo: 0,
-      iv_load_policy: 3,
-      theme: 'light',
-      color: 'white',
-    },
-  };
-
-  const onReady = (event: { target: any }) => {
-    event.target.playVideo();
-  };
-
-  return (
-    <YouTube videoId={videoId} opts={opts} onReady={onReady} className='rounded youtube-widget' />
-  );
-};
+};*/

@@ -12,7 +12,7 @@ const EventCard: React.FC = () => {
           <Image
             src={event.src}
             alt=""
-            className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
+            className="rounded-xl animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
             layout="fill"
           />
         </div>
